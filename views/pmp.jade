@@ -1,0 +1,237 @@
+extends layout
+
+block content
+    h1= title
+    p Then God said, "Let us make mankind in our image, in our likeness, so that they may rule over<br> the fish in the sea and the birds in the sky, over the livestock and all the wild animals, and over<br> all the creatures that move along the ground." ---Genesis 1:26
+
+    // Wrapper
+    #wrapper
+
+
+        // /USER INFO
+        h2 Search Topics
+        #searchPmtopicsFields
+            fieldset
+                input#inputSearchTopic(type='text', placeholder='Topic')
+                button#btnSearchTopic Search Any
+                br
+                input#inputSearchGroupNo(type='text', placeholder='GroupNo')
+                br
+                input#inputSearchManagementNo(type='text', placeholder='ManagementNo')
+                //button#btnSearchEmail Search Email
+        // USER LIST
+        h2 Topic List
+        #pmtopicsList
+            table.tablesorter
+                thead
+                    th Topic
+                    th Group
+                    th Group_No
+                    th Management
+                    th Management_No
+                    th Delete?
+                    th Update?
+                tbody
+        // /USER LIST
+
+        // ADD USER
+        h2 Add Topic
+        #addTopic
+                fieldset
+                    input#inputTopic(type='text', placeholder='Topic')
+
+                    br
+                    input#inputGroup(type='text', placeholder='Group')
+                    input#inputGroup_No(type='text', placeholder='Group_No')
+                    br
+                    input#inputManagement(type='text', placeholder='Management')
+                    input#inputManagement_No(type='text', placeholder='Management_No')
+                    br
+                    button#btnAddTopic Add Topic
+
+
+         //
+        p Input List
+        #inputList
+                table
+                    thead
+                        th Topic
+                        th Input
+                        th G
+                        th P
+                        th C
+                        th Reference
+                        th Delete?
+                        th Update?
+                    tbody
+                br
+                button#btnAddInput Add Input
+         //
+
+
+        //
+        p Tools&Technique List
+            #toolList
+                table
+                    thead
+                        th Topic
+                        th Tool
+                        th G
+                        th P
+                        th C
+                        th Reference
+                        th Delete?
+                        th Update?
+                    tbody
+                br
+                button#btnAddTool Add Tools&Technique
+        //
+
+
+        p Output List
+            #outputList
+                table
+                    thead
+                        th Topic
+                        th Output
+                        th G
+                        th P
+                        th C
+                        th Reference
+                        th Delete?
+                        th Update?
+                    tbody
+                br
+                button#btnAddOutput Add Output
+        //
+    // /WRAPPER
+
+    html.
+        <body>
+            <div>Hello, yes this is dog 123</div>
+               <div id="app">
+                   <!-- replaced by Vue Table -->
+               </div>
+
+               <script src="https://cdn.jsdelivr.net/npm/vue">
+                   Vue.use(Vuetable)
+
+
+
+                   new Vue({
+                       el: '#app',
+                       components: {
+                           MyTable
+                       },
+                       template: `
+                         <div class="ui container">
+                           <my-table></my-table>
+                         </div>`
+                   })
+               </script>
+
+                <div id="app-2">
+                  <span v-bind:title="message">
+                    Hover your mouse over me for a few seconds
+                    to see my dynamically bound title!
+                  </span>
+                </div>
+
+                <div id="app-3">
+                    <span v-if="seen">Now you see me</span>
+                </div>
+
+                <div id="app-4">
+                    <ol>
+                        <li v-for="todo in todos">
+                            {{ todo.text }}
+                        </li>
+                    </ol>
+                </div>
+
+                <div id="app-5">
+                    <p >{{ message }}</p>
+                    <!--<a v-bind:href="url"> {{ message }} </a>-->
+                    <button v-on:click="reverseMessage" >Reverse Message</button>
+                </div>
+
+                <div id="app-6">
+                    <p>{{ message }}</p>
+
+                    <input v-model="message">
+                </div>
+
+
+
+                <div id="app-7">
+                    <ol>
+
+                        <todo-item
+                                v-for="item in groceryList"
+                                v-bind:todo="item"
+                                v-bind:key="item.id">
+                        </todo-item>
+                    </ol>
+                </div>
+
+                <div id="app-8"></div>
+
+                <div id="components-demo">
+                    <button-counter-a></button-counter-a>
+                    <button-counter></button-counter>
+                    <button-counter></button-counter>
+
+
+                </div>
+
+                <div id="blog-post-event-demo">
+                    <div :style="{ fontSize: postFontSize + 'em' }">
+                    <blog-post
+                            v-for="item in posts"
+                            v-bind:key="item.id"
+                            v-bind:xpost="item"
+                            v-on:enlarge-text="onEnlargeText"
+                    ></blog-post>
+                    </div>
+                </div>
+
+                <custom-input v-model="searchText"></custom-input>
+                <table-component
+                 v-bind:data="[
+        { firstName: 'John', lastName: 'Lennon', instrument: 'Guitar', birthday: '04/10/1940', songs: 72 },
+        { firstName: 'Paul', lastName: 'McCartney', instrument: 'Bass', birthday: '18/06/1942', songs: 70 },
+        { firstName: 'George', lastName: 'Harrison', instrument: 'Guitar', birthday: '25/02/1943', songs: 22 },
+        { firstName: 'Ringo', lastName: 'Starr', instrument: 'Drums', birthday: '07/07/1940', songs: 2 },
+        ]"
+        sort-by="songs"
+        sort-order="asc"
+        >
+        <table-column show="firstName" label="First name"></table-column>
+        <table-column show="lastName" label="Last name"></table-column>
+        <table-column show="instrument" label="Instrument"></table-column>
+        <table-column show="songs" label="Songs" data-type="numeric"></table-column>
+        <table-column show="birthday" label="Birthday" data-type="date:DD/MM/YYYY"></table-column>
+        <table-column label="" :sortable="false" :filterable="false">
+        <template slot-scope="row">
+        <a :href="`#${row.firstName}`">Edit</a>
+        </template>
+        </table-column>
+        </table-component>
+
+
+        <div id="app-9" class="ui vertical stripe segment">
+            <div class="ui container">
+                <div id="content" class="ui basic segment">
+                    <h3 class="ui header">List of Users</h3>
+                    <vuetable
+                            api-url="http://localhost:3000/pmtopics/pmtopicslist"
+                            table-wrapper="#content"
+                            v-bind:fields="columns"
+
+        ></vuetable>
+        </div>
+        </div>
+        </div>
+
+        </body>
+

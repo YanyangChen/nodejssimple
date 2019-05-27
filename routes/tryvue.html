@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script type="module" src="/javascripts/views.js">
+    </script>
+    <script type="module" src="/javascripts/views2.js">
+
+    </script>
+</head>
+<body>
+
+<!--<script type="module" src="./views.js"></script>-->
+<div id="app">
+    {{ message }}
+</div>
+
+<div id="app-2">
+  <span v-bind:title="message">
+    Hover your mouse over me for a few seconds
+    to see my dynamically bound title!
+  </span>
+</div>
+
+<div id="app-3">
+    <span v-if="seen">Now you see me</span>
+</div>
+
+<div id="app-4">
+    <ol>
+        <li v-for="todo in todos">
+            {{ todo.text }}
+        </li>
+    </ol>
+</div>
+
+<div id="app-5">
+    <p >{{ message }}</p>
+    <!--<a v-bind:href="url"> {{ message }} </a>-->
+    <button v-on:click="reverseMessage" >Reverse Message</button>
+</div>
+
+<div id="app-6">
+    <p>{{ message }}</p>
+
+    <input v-model="message">
+</div>
+
+
+
+<div id="app-7">
+    <ol>
+
+        <todo-item
+                v-for="item in groceryList"
+                v-bind:todo="item"
+                v-bind:key="item.id">
+        </todo-item>
+    </ol>
+</div>
+
+<div id="app-8"></div>
+
+<div id="components-demo">
+    <button-counter></button-counter>
+    <button-counter></button-counter>
+    <button-counter></button-counter>
+    <blog-post title="My journey with Vue"></blog-post>
+    <blog-post title="Blogging with Vue"></blog-post>
+    <blog-post title="Why Vue is so fun"></blog-post>
+
+</div>
+
+<div id="blog-post-demo">
+    <blog-post
+            v-for="xpost in posts"
+            v-bind:key="xpost.id"
+            v-bind:title="post.title"
+    ></blog-post>
+</div>
+
+<!--Putting too much logic in your templates can make them bloated and hard to maintain. For example:-->
+<!--<div id="example">-->
+    <!--{{ message.split('').reverse().join('') }}-->
+<!--</div>-->
+
+<div id="example">
+    <p>Original message: "{{ message }}"</p>
+    <p>Computed reversed message: "{{ reversedMessage }}"</p>
+</div>
+<script type="module">
+    import { vmn,example1,app7,testable } from './javascripts/views2.js';
+    import MyTable from './javascripts/components/views2.js'
+    window.vmn=vmn;
+    window.example1=example1;
+    window.app7=app7;
+    window.testable=testable;
+    console.log(vmn);
+    console.log(app7);
+    console.log(example1);
+    console.log(testable);
+
+</script>
+</body>
+</html>

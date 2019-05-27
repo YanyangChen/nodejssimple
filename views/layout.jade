@@ -1,0 +1,22 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+    body
+        block content
+        //script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.js')
+        script(src='/javascripts/jquery-3.3.1.js')
+        //script(src='/javascripts/jquery.tablesorter.js')
+        //script(src='/javascripts/jquery.tablesorter.widgets.js')
+        //script(src='/javascripts/jquery.tablesorter.pager.js')
+        script(src='https://cdn.jsdelivr.net/npm/vue')
+        script(type='module' src='/javascripts/views.js')
+        script(type='module' src='/javascripts/views2.js')
+        script(type='module' src='/javascripts/vuetable.js')
+        script(type='module' src='/javascripts/pagination_components/components/MyTable.js')
+        script(type='text/javascript' src='http://cdn.jsdelivr.net/vue.table/1.5.3/vue-table.min.js')
+        //script(type='module' src='../views/views.js')
+        //script(type='module' src='../views/views2.js')
+        script(src='/javascripts/global.js')
+        script(src='/javascripts/pmpglobal.js')

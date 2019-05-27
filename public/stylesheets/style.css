@@ -1,0 +1,184 @@
+body {
+  padding: 30px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+h2 {
+	margin:0 0 .5em 0;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#wrapper {
+	padding-left:312px;
+	position:relative;
+}
+
+#detailList {
+	margin:0 0 30px 0;
+}
+#detailList table {
+	border-collapse:separate;
+	border-spacing:1px;
+	background:#CCC;
+}
+#detailList table th {
+	background:#EEE;
+	font-weight:600;
+	padding:10px 20px;
+	text-align:left;
+}
+#detailList table tbody {
+	padding:0; margin:0;
+	border-collapse:collapse;
+	border-spacing:0px;
+}
+#detailList table td {
+	background:#FFF;
+	padding:5px 10px;
+	text-align:left;
+}
+
+#toolList {
+	margin:0 0 30px 0;
+}
+#toolList table {
+	border-collapse:separate;
+	border-spacing:1px;
+	background:#CCC;
+}
+#toolList table th {
+	background:#EEE;
+	font-weight:600;
+	padding:10px 20px;
+	text-align:left;
+}
+#toolList table tbody {
+	padding:0; margin:0;
+	border-collapse:collapse;
+	border-spacing:0px;
+}
+#toolList table td {
+	background:#FFF;
+	padding:5px 10px;
+	text-align:left;
+}
+
+#outputList {
+	margin:0 0 30px 0;
+}
+#outputList table {
+	border-collapse:separate;
+	border-spacing:1px;
+	background:#CCC;
+}
+#outputList table th {
+	background:#EEE;
+	font-weight:600;
+	padding:10px 20px;
+	text-align:left;
+}
+#outputList table tbody {
+	padding:0; margin:0;
+	border-collapse:collapse;
+	border-spacing:0px;
+}
+#outputList table td {
+	background:#FFF;
+	padding:5px 10px;
+	text-align:left;
+}
+
+#inputList {
+	margin:0 0 30px 0;
+}
+#inputList table {
+	border-collapse:separate;
+	border-spacing:1px;
+	background:#CCC;
+}
+#inputList table th {
+	background:#EEE;
+	font-weight:600;
+	padding:10px 20px;
+	text-align:left;
+}
+#inputList table tbody {
+	padding:0; margin:0;
+	border-collapse:collapse;
+	border-spacing:0px;
+}
+#inputList table td {
+	background:#FFF;
+	padding:5px 10px;
+	text-align:left;
+}
+
+#userList {
+	margin:0 0 30px 0;
+}
+	#userList table {
+		border-collapse:separate;
+		border-spacing:1px;
+		background:#CCC;
+	}
+		#userList table th {
+			background:#EEE;
+			font-weight:600;
+			padding:10px 20px;
+			text-align:left;
+		}
+		#userList table tbody {
+			padding:0; margin:0;
+			border-collapse:collapse;
+			border-spacing:0px;
+		}
+			#userList table td {
+				background:#FFF;
+				padding:5px 10px;
+				text-align:left;
+			}
+
+#pmtopicsList {
+	margin:0 0 30px 0;
+}
+#pmtopicsList table {
+	border-collapse:separate;
+	border-spacing:1px;
+	background:#CCC;
+}
+#pmtopicsList table th {
+	background:#EEE;
+	font-weight:600;
+	padding:10px 20px;
+	text-align:left;
+}
+#pmtopicsList table tbody {
+	padding:0; margin:0;
+	border-collapse:collapse;
+	border-spacing:0px;
+}
+#pmtopicsList table td {
+	background:#FFF;
+	padding:5px 10px;
+	text-align:left;
+}
+
+
+#userInfo {
+	width:250px;
+	position:absolute;
+	top:0; left:0;
+}
+	#userInfo p {
+		padding:15px;
+		border:1px solid #CCC;
+		background:rgba(80,120,255,0.05);
+	}
+
+fieldset {
+	border:0;
+	padding:0; margin:0;
+}
