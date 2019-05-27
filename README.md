@@ -6,3 +6,6 @@ to start DB:
 to start WebAPP:
 D:\Aaron\nodejstest\nodetest2>
 npm start
+
+view:
+127.0.0.1/3000/pmp
